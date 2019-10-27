@@ -5,7 +5,7 @@ table, td, th {
   /* The navy bar to drink navys*/
   .navbar{
       overflow: hidden;
-      background-color: blue;
+      background-color:#223b6a;
       position:fixed;
       top:0;
       width:100%;
@@ -31,10 +31,9 @@ button{
     text-align: center;
     display:inline-block;
     font-size:16px;
-  text-decoration: none;
+    text-decoration: none;
     color: white;
     padding: 14px 16px
-    
 }
 
 button a{
@@ -48,4 +47,19 @@ button a{
 .imgresponsive{
     widows: 100%;
     height:auto
+}
+body{
+    float:left;
+}
+#signup{
+    color:red;
+}
+.footer{
+    overflow: hidden;
+      background-color:#223b6a;
+      bottom:0;
+      width:100%;
+      padding:2%;
+      color:white;
+      text-align:center;
 }
