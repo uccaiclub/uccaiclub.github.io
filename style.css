@@ -83,3 +83,8 @@ figure{
 p{
     font-size:20px;
 }
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
