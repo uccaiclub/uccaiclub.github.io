@@ -63,3 +63,20 @@ body{
       color:white;
       text-align:center;
 }
+.coloum{
+    float:left;
+    widows: 33.33%;
+    padding:70px;
+
+}
+.row::after{
+    content:"";
+    clear:both;
+    display:table;
+}
+figure{
+    display:inline-block;
+}
+#hello{
+    color:white;
+}
