@@ -158,6 +158,6 @@ p{
 }
 
 #Me:hover img{
-    filter: brightness(50%) blur(10px);
+    filter: brightness(50%) blur(2px);
 }
 
