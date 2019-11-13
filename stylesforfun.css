@@ -1,0 +1,9 @@
+body{
+    background:yellow;
+}
+p{
+    color:yellow;
+}
+.background{
+    background-image: url("backei");
+}

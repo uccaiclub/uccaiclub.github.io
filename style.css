@@ -135,7 +135,9 @@ p{
     text-align: center;
 }
 
-
+#Me a {
+    color:white;
+}
 #Me{
     display:inline-flex;
     position: relative;
