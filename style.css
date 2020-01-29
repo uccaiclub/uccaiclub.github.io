@@ -163,3 +163,13 @@ p{
     filter: brightness(50%) blur(2px);
 }
 
+
+
+
+
+
+.coloum1{
+    float:center;
+    width: 33.33%;
+    padding:-5%;
+}
