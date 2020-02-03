@@ -1,22 +1,59 @@
-import random
-ch = ['石头',   '剪子',   ' 布']
+# ping pong in python
+import turtle
+
+
+wn = turtle.Screen()
+wn.title("Pong by Lucas Allen")
+wn.bgcolor("black")
+wn.setup(width=800, height=600)
+wn.tracer(0)
+
+
+
+# Paddle A
+paddle_a = turtle.Turtle()
+paddle_a.speed(0)
+paddle_a.shape("square")
+paddle_a.color("white")
+paddle_a.shapesize(stretch_wid=5, stretch_len=1)
+paddle_a.penup()
+paddle_a.goto(-350, 0)
+
+# Paddle B
+paddle_b = turtle.Turtle()
+paddle_b.speed(0)
+paddle_b.shape("square")
+paddle_b.color("white")  
+paddle_b.shapesize(stretch_wid=5, stretch_len=1)
+paddle_b.penup()
+paddle_b.goto(350, 0)
+
+# ball
+ball = turtle.Turtle()
+ball.speed(0)
+ball.shape("square")
+ball.color("white")
+ball.penup()
+ball.goto(0, 0)
+
+# Function
+def paddle_a_up():
+    y = paddle_a.ycor()
+    y += 20
+    paddle_a.sety(y)
+
+def paddle_a_down():
+    y = paddle_a.ycor()
+    y -= 20
+    paddle_a.sety(y)
+
+#keyboard binding
+paddle_a.listen()
+paddle_a.onkeypress(paddle_a_up, "w")
+paddle_a.onkeypress(paddle_a_down, "s")
+
+
+# main game loop
 while True:
-    player = input('你出什么?')️
-    n = random.randint(0,2)
-    computer = ch[n]
-    print('电脑出' + computer)
-    if player == computer:
-        print('平')
-    elif player == '石头' and computer == '剪子':
-        print('你赢了')
-    elif player == '剪子' and computer == '布'':
-        print('你赢了')
-    elif player == '布' and computer == '石头:
-        print('你赢了')
-        
-    elif computer == '石头' and player == '剪子':
-        print('你输了')
-    elif computer == '剪子' and player == '布':
-        print('你输了')
-    elif computer == '布' and player == '石头':
-        print('你输了')
+    wn.update()
+
