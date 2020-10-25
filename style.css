@@ -1,175 +1,255 @@
-table, td, th {
-    border: 1px solid black;
-  }
-  /* The navy bar to drink navys*/
-  .navbar{
-      overflow: hidden;
-      background-color:#223b6a;
-      position:fixed;
-      top:0;
-      width:100%;
-      z-index:1;
-  }
-  /*links inside the drinking navy bar*/
-  .navbar a{
-      float: right;
-      display:block;
-      color:white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-      font-size:8;
-      font-family: Arial, Helvetica, sans-serif;
-  }
-.navbar a:hover {
-    background: #ddd;
-    color:black;
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
 }
-.main{
-    margin-top:40px;
+body {
+	font: 1em/1.5 'Open Sans', sans-serif;
+	color: #373737;
+	background: #eaeaea;
+	margin: 0;
 }
-button{
-    background-color:#4caf50;
-    text-align: center;
-    display:inline-block;
-    font-size:16px;
-    text-decoration: none;
-    color: white;
-    padding: 14px 16px
+a {
+	text-decoration: none;
+}
+h1,
+h2,
+h3 {
+	text-transform: uppercase;
+}
+h2 {
+	font-size: 1.125em;
+	color: #4a89ca;
+	font-weight: 600;
+	margin: 0;
+}
+h3 {
+	font-size: 1.3em;
+	line-height: 1.25em;
+	margin-top: .85em;
+	margin-bottom: .5em;
+}
+p {
+	font-size: .875em;
+	line-height: 1.4;
+	margin: 0 0 1.5em;
 }
 
-button a{
-    color: white;
-    background-color:#4caf50 ;
-    font-size:20px;
-    
-}
+/* ================================= 
+  Base Layout Styles
+==================================== */
 
+/* ---- Layout Containers ---- */
 
-.imgresponsive{
-    width: 100%;
-    height:auto
-}
-body{
-    float:left;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#signup{
-    color:red;
-}
-.footer{
-    overflow: hidden;
-      background-color:#223b6a;
-      bottom:0;
-      width:100%;
-      padding:2%;
-      color:white;
-      text-align:center;
-}
-.coloum{
-    float:left;
-    width: 33.33%;
-    padding:-5%;
-
-}
-.row::after{
-    content:"";
-    clear:both;
-    display:table;
-}
-
-
-.row{
-    display:flex;
-    flex-wrap:wrap;
-    padding:0 4px;
-}
-
-
-figure{
-    display:inline-block;
-}
-p{
-    font-size:20px;
-}
 .container {
-    position: relative;
+	width: 94.02985075%;
+	max-width: 1260px;
+	background: #fff;
+	margin: auto;
+}
+.main-header {
+	text-align: center;
+	padding: 2.8em 0;
+}
+.photo-container {
+	text-align: center;
+	margin-bottom: 4em;
+}
+
+/* ---- Page Elements ---- */
+
+.name {
+	font-size: 1.65em;
+	font-weight: 800;
+	margin: 0 0 1.5em;
+	line-height: 1;
+}
+.name span {
+	font-weight: 300;
+	margin-left: -7px;
+}
+.logo {
+	width: 45px;
+	margin-bottom: .4em;
+	cursor: pointer;
+}
+.photo {
+	position: relative;
+	line-height: 0;
+	margin-bottom: 2em;
+	overflow: hidden;
+}
+.photo-container img {
+	 max-width: 100%;
+	 overflow: hidden;
+}
+
+/* ---- Photo Overlay ---- */
+
+.photo-overlay {
+	color: #fff;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0; 
+	left: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+
+	display: flex; /* For centering text inside .photo-overlay */
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: rgba(0,0,0, .5);
+}
+.photo-overlay h3 {
+	margin-top: 0;
+}
+.slide {
+	color: #fff;
+	padding: 20px 0;
+	background: rgba(74,137,202, .8);
+	margin: 0;
+}
+.slide .photo-overlay {
+	opacity: 1;
+	background: #345d88;
+}
+/* ---- Float clearfix ---- */
+
+.clearfix::after {
+	content: " ";
+	display: table;
+	clear: both;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 0) and (max-width: 768px) {
+	.container {
+		padding: 0 1.225em 2.5em;
+	}
+}
+@media (min-width: 769px) {
+	.container {
+		padding: 0 2.25em 3em;
+	}
+	.photo-container {
+		width: 48%;
+		float: left;
+		margin-left: 4%;
+	}
+}
+@media (min-width: 769px) and (max-width: 1024px) { 
+	.photo-container:nth-child(2n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+@media (min-width: 1025px) { 
+	.photo-container {
+		width: 30.63973064%;
+	}
+	.photo-container:nth-child(3n+1) {
+		margin-left: 0;
+		clear: left;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*  HEADER STYLES  */
+.header{
     text-align: center;
-    color: white;
+    background-color: rgb(247, 247, 247);
+    height:100%;
+    color: #5c5c5c;
+    padding-bottom: 20px;
+    font-size: 1.25em;
+    padding-bottom: 60px;
+}
+
+.inner-header,
+.outer-header{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.main-nav li{
+  display: block;
+  background-color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.description{
+  font-size: 1.25rem;
+  margin-left: 20px;
+  margin-right: 20px;
+  color: rgb(126, 126, 126);
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+	.back-to-top{
+	  visibility: hidden;
+	  float: left;
+	}
+  
+	.ipad-bottom-nav{
+	  visibility: visible;
+	}
+  
+	.main-nav li{
+	  display: inline-block;
+	  padding: 10px 0 10px;
+	  margin-bottom: 10px;
+	  font-weight: bold;
+	  margin-right: 40px;
+	  background-color: white;
+	}
+  
+	.profile-picture{
+	  float: right;
+	  margin-left: 20px; 
+	  width: 30%;
+	}
+	
+	
+	.description{
+	  text-align: left;
+	  float: left;
+	  width: 60%;
+	}
+	
+	.float-left-div{
+	  width: 50%;
+	  float: left;
+	  padding-left: 20px;
+	  padding-right: 20px;
+	}
+  
   }
-  .coloum{
-    width: 100%;
-    height:auto
-}
-#imgresponsive{
-    width: 100%;
-    height:auto
-}
 
-
-
-.wrapper{
-    text-align:center;
-    font-size:30 px;
-}
-
-
-
-.img-area{
-    display:flex;
-    flex-wrap:wrap;
-    flex-direction: row;
-    align-items:center;
-    justify-content: center;
-
-}
-.single-img{
-    padding: 0 20px 20px;
-
-}
-
-
-
-.img-text{
-    padding: 15px;
-    text-align: center;
-}
-
-#Me a {
-    color:white;
-}
-#Me{
-    display:inline-flex;
-    position: relative;
-    cursor: pointer;
-}
-.overimg{
-    display:none;
-}
-.overimg a{
-    text-decoration: none;
-}
-#Me:hover > .overimg{
-    display: inline-block;
-    color:white;
-    position: absolute;
-    left:50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    
-}
-
-#Me:hover img{
-    filter: brightness(50%) blur(2px);
-}
-
-
-
-
-
-
-.coloum1{
-    float:center;
-    width: 33.33%;
-    padding:-5%;
-}
