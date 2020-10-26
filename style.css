@@ -26,13 +26,13 @@ h2 {
 	margin: 0;
 }
 h3 {
-	font-size: 1.3em;
+	font-size: 1.5em;
 	line-height: 1.25em;
 	margin-top: .85em;
 	margin-bottom: .5em;
 }
 p {
-	font-size: .875em;
+	font-size: 1.2em;
 	line-height: 1.4;
 	margin: 0 0 1.5em;
 }
@@ -207,11 +207,19 @@ p {
 }
 
 
-
-
+.iframe{
+	min-width: 400px;
+	display: block;
+	height: 200px;
+}
 
 
 @media (min-width: 768px) {
+  
+	.iframe{
+		max-width: 400px !important;
+		height: 200px;
+	}
 
 	.back-to-top{
 	  visibility: hidden;
@@ -251,5 +259,48 @@ p {
 	  padding-right: 20px;
 	}
   
+  }
+
+
+  .inline{
+	  display: inline;
+	  margin-top: 23px;
+	  margin-bottom: 24.5px;
+	  text-align:center;
+  }
+
+  .inline-2{
+	display: inline;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align:center;
+}
+
+.inline-3{
+	display: inline;
+	margin-top: 0px;
+	text-align:center;
+}
+
+
+  .flex,
+  .flex2{
+	  display: inline-flex;
+	  flex-direction: column;
+	  margin-left: 20px;
+  }
+
+
+  .no-style{
+	  margin: 0px;
+  }
+
+  .inline-4{
+	  margin-bottom: 3px;
+	  text-align:center;
+  }
+
+  .flex2{
+	  margin-left: 60px;
   }
 
